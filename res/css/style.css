@@ -1,0 +1,735 @@
+
+@font-face
+{
+    font-family: roboto;
+    src: url(../fonts/roboto.otf);
+}
+
+
+@font-face
+{
+    font-family: SHPinscher;
+    src: url(../fonts/SHPinscher.otf);
+}
+
+html, body
+{
+   height: 100%;
+   font-size: 100%;
+}
+
+body
+{
+    height: 100%;
+    font-family: roboto;
+    color: white;
+    background: #0072be;
+    background: url('../img/back.jpg');
+}
+
+#copyright
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 0px;
+    left: 0px;
+    padding-top: 15%;
+    display: none;
+}
+
+#copyrightTitle
+{
+    color: #0072be;
+    font-size: 6rem;
+    font-family: SHPinscher;
+}
+
+#copyrightPart
+{
+    color: white;
+    font-size: 6rem;
+    font-family: SHPinscher;
+    margin-bottom: 2%;
+}
+
+#copyrightPeople
+{
+    color: #fdf5ea;
+    font-size: 2.5rem;
+    font-family: roboto;
+}
+
+#copyrightQuit
+{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-image: url('../img/quit.png');
+    width: 100px;
+    height: 100px;
+}
+
+#copyrightEnd
+{
+    color: #fdf5ea;
+    font-size: 1.5rem;
+    font-family: roboto;
+}
+
+#footer
+{
+    position: fixed; 
+    bottom: 0px; 
+    left: 0px; 
+    width: 100%; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    background: rgba(0, 102, 186, 0.8); 
+    margin: 0px;
+    font-family: SHPinscher;
+    font-size: 3rem;
+}
+
+#footer a
+{
+    color: white;
+    text-transform: uppercase;
+}
+
+#firstScreenTitle
+{
+    font-size: 30em;
+    font-family: SHPinscher;
+    padding-top: 8%;
+    margin-left: 8%;
+    line-height: 80%;
+    text-shadow: -5px 5px #6cadda;
+}
+
+#firstScreenButtons
+{
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+#withTitle
+{
+    display: none;
+}
+
+
+ 
+.gameTitle
+{
+    width: 100%;
+    display: inline-block;
+    background-image: url('../img/header.png');
+    background-size: 100%;
+}
+
+.gameTitle:after
+{
+    padding-top: 10.53%;
+    display: block;
+    content: '';
+}
+
+#firstWelcomeSentence, #secondWelcomeSentence
+{
+    position: absolute;
+    color: white;
+    font-size: 8em;
+    font-family: SHPinscher;
+    padding-left: 15%;
+    margin-top: 2%;
+    display: none;
+}
+
+.gameBody
+{
+    width: 100%;
+    font-size: 3em;
+}
+
+#appealingAnim
+{
+    font-family: SHPinscher;
+    font-size:250px;
+    margin-top: 200px;
+    margin-left: 150px;
+
+}
+
+#buttonScreen
+{
+    display: none;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20%;
+}
+#secondAppButtonScreen
+{
+    display: none;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.bigButton
+{
+    background : white;
+    color: #0072be;
+    border: 0px;
+    font-size: 4rem;
+    margin-left: 1%;
+    box-shadow: -5px 5px #6cadda;
+    font-family: SHPinscher;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    border-radius: 3px;
+    
+}
+
+.bigButton:hover
+{
+    background: #eeeeee;
+    color: #0072be;
+}
+
+.bigButtonModal
+{
+    background : #0072be;
+    color: white;
+    border: 0px;
+    font-size: 4rem;
+    margin-left: 1%;
+    box-shadow: -5px 5px #6cadda;
+    font-family: SHPinscher;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    border-radius: 3px;
+    
+}
+
+
+.blinkButton
+{
+    opacity:0;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+
+
+
+.imgDirection
+{
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size : 90% 90%;
+}
+
+.imgDirectionForward
+{
+    background-image: url('../img/forward.svg');
+}
+
+.imgDirectionLeft
+{
+    background-image: url('../img/turnLeft.svg');
+}
+
+.imgDirectionRight
+{
+    background-image: url('../img/turnRight.svg');
+}
+
+
+.imgDirectionLeftRound
+{
+    background-image: url('../img/turnLeftRound.png');
+}
+
+.imgDirectionRightRound
+{
+    background-image: url('../img/turnRightRound.png');
+}
+
+
+.imgDirectionTurnAround
+{
+    background-image: url('../img/turnAround.svg');
+}
+
+
+.imgStart
+{
+    background-image: url('../img/start.png');
+}
+
+
+@-webkit-keyframes fade-in
+{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+.instructionLine
+{
+    opacity:0;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.topSentence
+{
+    font-size:40px;
+    display: none;
+    margin-bottom: 40px;
+}
+
+#frontendAppBody
+{
+    background-image: url("../img/mazeBg.png");
+}
+
+#instructionsScreen
+{
+    display : none;
+    padding-top: 10%;
+    text-align: center;
+}
+
+#secondAppInstructionsScreen
+{
+    display : none;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
+#appealingScreen
+{
+    display : none;
+}
+
+#gameScreen
+{
+    display : none;
+    margin: 1%;
+}
+
+#secondGameScreen
+{
+    display : none;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1.5%;
+    
+}
+
+
+#selecterScreen
+{
+    display : none;
+}
+
+#victoryFirstAppScreen
+{
+    display : none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+
+#victorySecondAppScreen
+{
+    display : none;
+    margin-top: 2%;
+}
+
+
+#firstGameHelp
+{
+    display: none;
+}
+
+#videoInstructions
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cell
+{
+    border-radius: 3px;
+    color: black;
+    background: white;
+    background-image: url('../img/mazeBg.png');
+    line-height: 6.8em;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.modal
+{
+    color: black;
+}
+
+.smallPadding
+{
+    padding: 5px;
+}
+
+.cursorCell
+{
+    background: lightgray;
+}
+
+.highlightCell
+{
+    background: #FF3333;
+}
+
+.cellText
+{
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 20%;
+    float : right;
+    font-size: 3rem;
+}
+
+.cellIcon
+{
+    width: 20%;
+    float: right;
+    margin-top: 5px;
+    font-size : 70px;
+    text-align: center;
+    color : #6cadda;
+    font-weight: normal;
+}
+
+.cellIcon:after
+{
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+.correctDiv
+{
+    line-height: 80px;
+    font-weight: bold;
+}
+
+
+
+.fullState
+{
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/wallForward.png');
+    background-size: 50px;
+}
+
+.emptyState
+{
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/pathForward.png');
+    background-size: 50px;
+    
+}
+
+.emptyFullState
+{
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+    background-image: url('../img/emptyFullForward.png');
+}
+
+
+.inputAlgorithmBottom
+{
+    width: 50px;
+    height: 25px;
+    margin-left: 50px;
+    background-image: url('../img/robotBottom.png');
+    background-size: contain;
+    float : left;
+}
+
+.inputAlgorithmTop
+{
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/robotTop.png');
+    background-size: contain;
+    float : left;
+}
+
+.leftCell
+{
+
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    border-bottom: 2px solid gray;
+    float : left;
+    border-radius: 3px 0 0 3px;
+    background-position: -2px -2px;
+}
+
+.leftCell.fullState
+{
+    background-image: url('../img/wallLeft.png');
+}
+
+.leftCell.emptyState
+{
+    background-image: url('../img/pathSide.png');
+}
+
+.leftCell.emptyFullState
+{
+    background-image: url('../img/emptyFullLeft.png');
+}
+
+
+
+.forwardCell
+{
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    margin-left: 50px;
+    border-radius: 3px 3px 0 0;
+    background-position: -2px -2px;
+}
+
+.rightCell
+{
+    margin-left: 100px;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-radius: 0px 3px 3px 0;
+    background-position: -2px -2px;
+}
+
+.rightCell.fullState
+{
+    background-size: 50px;
+    background-image: url('../img/wallRight.png');
+}
+
+
+.rightCell.emptyState
+{
+    background-image: url('../img/pathSide.png');
+    background-size: 50px;
+}
+
+.rightCell.emptyFullState
+{
+    background-image: url('../img/emptyFullRight.png');
+    background-size: 50px;
+}
+
+
+.stateInstructionDrag
+{
+    border-radius: 3px;
+}
+
+.algorithmText
+{
+    line-height: 50px;
+
+}
+.conditionText
+{
+    line-height: 50px;
+    font-size: 2.5rem;
+}
+
+.directionDrop
+{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: 2px  #6d726a solid;
+    color : #6cadda;
+    line-height: 48px;
+    border-radius : 3px;
+}
+
+.directionDrag
+{
+    line-height: 48px;
+    font-size: 30px;
+    text-align: center;
+    color : #6cadda;
+    width: 50px;
+    height: 50px;
+    border-radius : 3px;
+}
+
+.directionDrag:after
+{
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+
+#algorithmBox
+{
+    border-radius: 3px;
+    padding: 10px;
+    color: #666666;
+    min-height: 680px;
+    max-height: 680px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: url('../img/mazeBg.png');
+}
+
+
+.highlight.fullStateHighlight.forwardCell
+{
+    background-image: url('../img/wallForward.png') !important;
+}
+
+.highlight.fullStateHighlight.leftCell
+{
+    background-image: url('../img/wallLeft.png') !important;
+}
+
+.highlight.fullStateHighlight.rightCell
+{
+    background-image: url('../img/wallRight.png') !important;
+}
+
+
+.highlight.emptyStateHighlight.forwardCell
+{
+    background-image: url('../img/pathForward.png') !important;
+}
+
+.highlight.emptyStateHighlight.leftCell
+{
+    background-image: url('../img/pathSide.png') !important;
+}
+
+.highlight.emptyStateHighlight.rightCell
+{
+    background-image: url('../img/pathSide.png') !important;
+}
+
+.highlight.emptyFullStateHighlight.forwardCell
+{
+    background-image: url('../img/emptyFullForward.png') !important;
+}
+
+.highlight.emptyFullStateHighlight.leftCell
+{
+    background-image: url('../img/emptyFullLeft.png') !important;
+}
+
+.highlight.emptyFullStateHighlight.rightCell
+{
+    background-image: url('../img/emptyFullRight.png') !important;
+}
+
+
+
+.highlight.directionForwardHighlight
+{
+    background-image: url('../img/forward.svg') !important;
+}
+
+.highlight.directionLeftHighlight
+{
+    background-image: url('../img/turnLeft.svg') !important;
+}
+
+.highlight.directionRightHighlight
+{
+    background-image: url('../img/turnRight.svg') !important;
+}
+
+.highlight.directionTurnAroundHighlight
+{
+    background-image: url('../img/turnAround.svg') !important;
+}
+
+
+.highlightDrag.forwardCell
+{
+    background-image: url('../img/emptyFullForward.png') !important;
+}
+
+.highlightDrag.leftCell
+{
+    background-image: url('../img/emptyFullLeft.png') !important;
+}
+
+
+.highlightDrag.rightCell
+{
+    background-image: url('../img/emptyFullRight.png') !important;
+}
+
+
+.instruction
+{
+    margin-bottom: 10px;
+}
+
+.algorithmButtons
+{
+    margin: 10px;
+    margin-top: 1%;
+}
+
+.trophy
+{
+    font-size: 40rem;
+    color: #6cadda;
+    line-height: 40rem;
+}
+
+#cursor
+{
+    background-image: url('../img/cursor.png');
+    background-size: 100%;
+    width: 70px;
+    height: 70px;
+    display: none;
+    position: fixed;
+}

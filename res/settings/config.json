@@ -1,0 +1,18 @@
+{
+    "defaultLanguage" : "fr",
+    "disableMouse"    : true,
+    "timeout"         : 60, 
+    "waitingTimeout"  : 10,
+    "screenSaver"     : 20,
+    "firstApp" : 
+    {
+        "defaultScreen" : "appealingScreen",
+        "url"           : "firstApp"
+    },
+    "secondApp" : 
+    {
+        "defaultScreen" : "appealingScreen",
+        "url"           : "secondApp",
+        "binThreshold"  : 100 
+    }
+}

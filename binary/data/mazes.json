@@ -1,0 +1,23 @@
+[
+	{
+		"size"  : 80,
+		"seed"  : 115346,
+		"red"   : {"x": 40, "y": 4, "direction": "right"},
+		"green" : {"x": 1, "y" : 40, "direction": "up"},
+		"blue"  : {"x": 76, "y": 49, "direction": "down"}
+	},
+	{
+		"size"  : 80,
+		"seed"  : 123456787,
+		"red"   : {"x": 49, "y": 7, "direction": "top"},
+		"green" : {"x": 1, "y" : 34, "direction": "down"},
+		"blue"  : {"x": 73, "y": 49, "direction": "down"}
+	},
+	{
+		"size"  : 80,
+		"seed"  : 150711,
+		"red"   : {"x": 49, "y": 19, "direction": "left"},
+		"green" : {"x": 1, "y" : 37, "direction": "down"},
+		"blue"  : {"x": 1, "y": 1, "direction": "down"}
+	}
+]

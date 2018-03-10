@@ -1,0 +1,82 @@
+//
+// File: any1.cpp
+//
+// MATLAB Coder version            : 3.3
+// C/C++ source code generated on  : 04-Oct-2017 10:47:28
+//
+
+// Include Files
+#include "rt_nonfinite.h"
+#include "generateMaze.h"
+#include "updateMazePledge.h"
+#include "updateMazeRandomMouse.h"
+#include "updateMazeShortestPathBFS.h"
+#include "updateMazeTremauxs.h"
+#include "updateMazeWallFollower.h"
+#include "updateStartPosition.h"
+#include "any1.h"
+
+// Function Definitions
+
+//
+// Arguments    : const boolean_T x[4]
+// Return Type  : boolean_T
+//
+boolean_T any(const boolean_T x[4])
+{
+  boolean_T y;
+  int k;
+  boolean_T exitg1;
+  y = false;
+  k = 0;
+  exitg1 = false;
+  while ((!exitg1) && (k < 4)) {
+    if (x[k]) {
+      y = true;
+      exitg1 = true;
+    } else {
+      k++;
+    }
+  }
+
+  return y;
+}
+
+//
+// Arguments    : boolean_T x
+// Return Type  : boolean_T
+//
+boolean_T b_any(boolean_T x)
+{
+  return x;
+}
+
+//
+// Arguments    : const boolean_T x[4]
+// Return Type  : boolean_T
+//
+boolean_T c_any(const boolean_T x[4])
+{
+  boolean_T y;
+  int k;
+  boolean_T exitg1;
+  y = false;
+  k = 0;
+  exitg1 = false;
+  while ((!exitg1) && (k < 4)) {
+    if (x[k]) {
+      y = true;
+      exitg1 = true;
+    } else {
+      k++;
+    }
+  }
+
+  return y;
+}
+
+//
+// File trailer for any1.cpp
+//
+// [EOF]
+//

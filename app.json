@@ -1,0 +1,22 @@
+
+{
+	"name" : "Labyrinthe v1.5.4",
+	"description": "Application description",
+
+	"app" : 
+	{
+		"type" : "change",
+		"id"   : "Streaming with interpolation"
+	},
+
+	"com" : 
+	{
+		"type" : "binary",
+		"file"   : "binary/maze",
+		"frontEnd": 
+		{
+		    "page" : "gui.pug",
+		    "public" : "res"
+		}
+	}
+}

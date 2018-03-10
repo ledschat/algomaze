@@ -1,0 +1,353 @@
+{ 
+    "fr":
+    {        
+        "timeout"  : "Temps d'inaction trop long. Manifestez-vous ou le jeu redémarrera.",
+        "startSim" : "Validation",
+        "stopSim"  : "Interrompre",
+        "continue" : "Corriger",
+        "finish"   : "Terminé",
+        "start"    : "Début",
+        "error"    : "Planté ! Il doit y avoir une erreur.",
+        "lookMessage" : "Regardez le grand labyrinthe devant vous.",
+        "errorWhy" : 
+        {
+            "noRule" : "Le robot n'a pas trouvé d'instruction convenable pour se diriger.",
+            "invalidRule" : "Le robot s'est dirigé vers un mur.",
+            "loop": "Le robot est en train de tourner en rond.",
+            "noDirection" : "Le robot a lu tous vos ordres et ne sait pas où continuer.",
+            "wall" : "Le robot s'est dirigé vers un mur."
+        },
+
+        "directions" :
+        {
+            "left" : "Tourner à gauche",
+            "right" : "Tourner à droite",
+            "forward" : "Aller tout droit",
+            "turnAround" : "Faire demi-tour"
+        },
+        
+        "restart": "Souhaitez-vous recommencer depuis le début ?",
+        "yes" : "Oui",
+        "no" : "Non",
+
+        "firstApp":
+        {
+            "welcome"  : "Donnez les directions !",
+            "help"     : "Aide",
+            "helpMessage": "Regardez la réponse sur le labyrinthe.",
+            "start"    : "Démarrer",
+           
+            "instructions" : 
+            [
+                "Repérez le carré rouge dans le labyrinthe.", 
+                "Imaginez que c’est un petit robot, vous allez l’aider à trouver la sortie.", 
+                "C'est parti!",
+                "Ce robot avance tout seul.",
+                "Vous devez juste lui donner les bonnes instructions pour les prochains virages ou intersections.",
+                "Il peut soit tourner à sa droite, soit tourner à sa gauche, soit continuer tout droit.", 
+                "Enfin, appuyez sur Validation pour démarrer le robot.",
+                "OK"
+            ],
+            
+            "victory" : 
+            [
+                "Bien joué ! Le robot rouge est sorti.",
+                "Mais… dans un autre labyrinthe, votre programme ne fonctionnerait plus. ",
+                "Existe-t-il un algorithme qui résout n’importe quel labyrinthe ? Testez les postes « niveau confirmé » et « niveau expert » pour en savoir plus."
+            ],
+
+            "correct" : "Pour corriger une instruction, touchez-la"
+        },
+
+        "secondApp":
+        {
+
+            "welcome"  : "Concevez un algorithme !",
+            "solution" : "Aide",
+            "help": 
+            [
+                "1er indice: Il faut 4 lignes d'instructions.",
+                "2e indice: la première ligne dit « S’il y a un chemin à droite, alors tourne à droite ».",
+                "3e indice: la deuxième ligne dit « S’il y a un mur à droite et un chemin devant, alors va tout droit ».",
+                "4e indice: la troisième ligne dit « S’il y a un mur à droite, un mur devant et un chemin à gauche, alors tourne à gauche ».",
+                "5e indice: la quatrième ligne dit « Si c’est un cul-de-sac, alors fais demi-tour »."
+            ],
+            "helpTitle": "Voici comment programmer l’algorithme « Toujours suivre le mur de droite » :",
+            "hint": "Un autre indice?",
+           
+          
+            
+            "instructions" : 
+            [
+                "Repérez le carré vert dans le labyrinthe.", 
+                "Imaginez que c’est un petit robot, vous allez concevoir un algorithme qui lui permettra de sortir de n’importe quel labyrinthe.", 
+                "C'est parti!", 
+                "Voici un algorithme qui fonctionne à tous les coups (ou presque): ",
+                "TOUJOURS LONGER LE MUR DE DROITE", 
+                "(cela fonctionnerait aussi bien à gauche).", 
+                "Pour composer une instruction, faîtes glisser les pictogrammes comme sur cette animation.",
+                "J'ai compris."
+            ],
+            "helpSymbol" :
+            [
+                "Cette ligne:",
+                "Est équivalente à ces deux lignes:"
+            ],
+
+            "repeat"  : "Tant que le robot n'est pas sorti, répéter les instructions suivantes:",
+            "wall"    : "Mur",
+            "path"    : "Chemin",
+            "wallOrPath" : "Mur ou chemin",
+            "whatever": "(peu importe)",
+            "addLine" : "Ajouter une ligne",
+            "if"      : "Si",
+            "else"    : "Sinon",
+            "elseif"  : "Sinon si",
+            "then"    : "Alors",
+            "restartTuto" : "Revoir le tutoriel",
+            "tutorial" : "Tutoriel",
+            "toDo": "Programmez l'algorithme TOUJOURS LONGER LE MUR DE DROITE puis appuyez sur validation",
+            "victory" : 
+            [
+                "Bravo ! Le robot vert peut maintenant sortir de n’importe quel labyrinthe.",
+                "Il existe d’autres algorithmes pour résoudre des labyrinthes, tous différents.",
+                "Passez au poste « niveau expert » pour les découvrir.",
+                "Pour un jeu plus facile, essayez le poste « niveau débutant »."
+            ]
+        }
+
+    },
+    "en":
+    {        
+        "timeout"  : "Touch the screen or the game will restart.",
+        "startSim" : "Confirm",
+        "stopSim"  : "Stop",
+        "continue" : "Modify",
+        "finish"   : "Completed",
+        "start"    : "Start",
+        "error"    : "Oops ! You must have made a mistake.",
+        "lookMessage" : "Look at the great maze in front of you.",
+        "errorWhy" : 
+        {
+            "noRule" : "The robot has not found a suitable instruction to find its way.",
+            "invalidRule" : "The robot has gone into a wall.",
+            "loop": "The robot is going round in circles.",
+            "noDirection" : "The robot has read all your orders and is unable to continue.",
+            "wall" : "The robot has gone into a wall."
+        },
+
+        "directions" :
+        {
+            "left" : "Turn left",
+            "right" : "Turn right",
+            "forward" : "Go straight ahead",
+            "turnAround" : "Turn back"
+        },
+        
+        "restart": "Do you wish to start over from the beginning?",
+        "yes" : "Yes",
+        "no" : "No",
+
+        "firstApp":
+        {
+            "welcome"  : "Give directions !",
+            "help"     : "Help",
+            "helpMessage": "Check the answer on the labyrinth.",
+            "start"    : "Start",
+           
+            "instructions" : 
+            [
+                "Find the red square in the maze.",
+                "Imagine it is a small robot and you are going to help it find the way out.",
+                "And we're off!",
+                "The robot can move forwards on its own.",
+                "You just need to give it the correct instructions for the next turns and intersections.",
+                "It can either turn to its right, turn to its left or continue straight ahead.", 
+                "Then press Confirm to start the robot.",
+                "OK"
+            ],
+            
+            "victory" : 
+            [
+                "Well played! The red robot has found its way out.",
+                "But... your programme would not work in any other maze.",
+                "Is there an algorithm that can solve any maze? Try the \"advanced level\" and \"expert level\" stations to find out more."
+            ],
+
+            "correct" : "Touch an instruction to modify it"
+        },
+
+        "secondApp":
+        {
+
+            "welcome"  : " Design an algorithm!",
+            "solution" : "Help",
+            "help": 
+            [
+                "Hint 1: you need four lines of instructions.",
+                "Hint 2: the first line says \"If there is a pathway on the right, turn right\".",
+                "Hint 3: the second line says \"If there is a wall on the right, and a pathway ahead, then go straight ahead\".",
+                "Hint 4: the third line says \"If there is a wall on the right, a wall ahead and a pathway on the left, turn left\".",
+                "Hint 5: the fourth line says \"If it's a dead end, turn around\"."
+            ],
+            "helpTitle": "Here is how to program the algorithm \"always follow the right-hand wall\":",
+            "hint": "Another clue?",
+          
+            
+            "instructions" : 
+            [
+                "Find the green square in the maze.", 
+                "You have to design an algorithm that will help it to get out of any maze.", 
+                "And we're off!", 
+                "Here is an algorithm that works every time (or nearly):",
+                "ALWAYS FOLLOW THE RIGHT WALL",
+                "(also works with the left wall).", 
+                "Drag the pictograms to create an instruction, like in this animation.",
+                "I understand."
+            ],
+            "helpSymbol" :
+            [
+                "This line:",
+                "is equivalent to these two lines:"
+            ],
+            "repeat"  : "Repeat the following instructions until the robot has found its way out:",
+            "wall"    : "Wall",
+            "path"    : "Pathway",
+            "wallOrPath" : "Wall or pathway",
+            "addLine" : "Add a line",
+            "if"      : "If",
+            "else"    : "Else",
+            "elseif"  : "Else if",
+            "then"    : "Then",
+            "restartTuto" : "Review the tutorial",
+            "tutorial" : "Tutorial",
+            "whatever": "(no matter)",
+            "toDo": "Program the algorithm ALWAYS FOLLOW THE RIGHT WALL then press confirm",
+            "victory" : 
+            [
+                "Well done! The green robot can now get out of any maze.",
+                "There are other algorithms for solving mazes, and they're all different. Move on to the \"expert level\" station to discover them.",
+                "For an easier game, try the \"entry level\" station."
+            ]
+        }
+
+    },
+    "it":
+    {        
+        "timeout"  : "Tocca lo schermo o il gioco verrà riavviato.",
+        "startSim" : "Convalida",
+        "stopSim"  : "Interrompere",
+        "continue" : "Correggi",
+        "finish"   : "Fine",
+        "start"    : "Inizio",
+        "error"    : "Bloccato ! Deve esserci stato un errore.",
+        "lookMessage" : "Guarda il grande labirinto davanti a te.",
+        "errorWhy" : 
+        {
+            "noRule" : "Il robot non ha trovato istruzioni accettabili da seguire.",
+            "invalidRule" : "Il robot si trova davanti a una parete.",
+            "loop": "Il robot sta per tornare indietro.",
+            "noDirection" : "Il robot ha letto tutti gli ordini impartiti ma non sa più come proseguire.",
+            "wall" : "Il robot si trova davanti a una parete."
+        },
+
+        "directions" :
+        {
+            "left" : "O a sinistra",
+            "right" : "Girare a destra",
+            "forward" : "Andare dritto",
+            "turnAround" : "Tornare indietro"
+        },
+        
+        "restart": "Vuoi ricominciare dall'inizio?",
+        "yes" : "Si",
+        "no" : "No",
+
+        "firstApp":
+        {
+            "welcome"  : " Fate strada!",
+            "help"     : "Aiuto",
+            "helpMessage": "Guarda la risposta sul labirinto.",
+            "start"    : "Inizio",
+           
+            "instructions" : 
+            [
+                "Individuate il quadrato rosso all'interno del labirinto.", 
+                "Immaginate che si tratti di un piccolo robot e che il vostro compito consista nell'aiutarlo a trovare l'uscita.", 
+                "Si parte!",
+                "Il robot avanza da solo.", 
+                "Voi dovete solo indicargli quale direzione prendere in corrispondenza di una curva o di un incrocio.",
+                "Potete dirgli di svoltare a destra o a sinistra oppure di continuare diritto.", 
+                "Infine, premete il pulsante di convalida per avviare il robot.",
+                "OK"
+            ],
+            
+            "victory" : 
+            [
+                "Ben fatto! Il robot rosso ha trovato l'uscita.",
+                "Ma… in un altro labirinto, il vostro programma non funzionerà.",
+                "Esiste un algoritmo che consente di trovare la soluzione per qualsiasi labirinto? Provate a selezionare \"livello confermato\" e \"livello esperto\" per ulteriori informazioni."
+            ],
+
+            "correct" : "Per modificare un'istruzione, toccatela"
+        },
+
+        "secondApp":
+        {
+
+            "welcome"  : "Create un algoritmo!",
+            "solution" : "Aiuto",
+            "help": 
+            [
+                "1º indizio: servono 4 righe di istruzioni.",
+                "2º indizio: la prima riga dice \"Se c'è una via libera a destra, gira a destra\".",
+                "3º indizio: la seconda riga dice \"Se c'è una parete a destra e una via libera davanti, vai avanti\".",
+                "4º indizio: la terza riga dice \"Se c'è un muro a destra, un muro davanti e una via libera a sinistra, gira a sinistra\".",
+                "5º indizio: la quarta riga dice \"Se sei bloccato, torna indietro\"."
+            ],
+            "helpTitle": "Ecco come programmare l'algoritmo \"Continua a seguire la parere di destra\":",
+            "hint": "Un altro indizio?",
+          
+            
+            "instructions" : 
+            [
+                "Individuate il quadrato verde all'interno del labirinto.", 
+                "Preparatevi a creare un algoritmo che gli consentirà di trovare l'uscita in qualsiasi labirinto.", 
+                "Si parte!", 
+                "Ecco un algoritmo che funziona in tutte le situazioni (o quasi):",
+                "SEGUIRE SEMPRE LA PARETE DI DESTRA", 
+                "(oppure sempre quella di sinistra).",
+                "Per comporre un'istruzione, fate scorrere i pittogrammi come in questa animazione.",
+                "Ho capito."
+            ],
+            "helpSymbol" :
+            [
+                "Questa linea:",
+                "È equivalente a queste due righe:"
+            ],
+
+            "repeat"  : "Finché il robot non è ancora uscito, ripeterele seguenti istruzioni:",
+            "wall"    : "Muro",
+            "path"    : "Via",
+            "wallOrPath" : "Muro or via",
+            "addLine" : "Aggiungete una linea",
+            "if"      : "Se",
+            "else"    : "Altrimenti",
+            "elseif"  : "Altrimenti si",
+            "then"    : "Allora",
+            "restartTuto" : "Rivedere il lezione",
+            "tutorial" : "Lezione",
+            "whatever": "(non importa)",
+            "toDo": "Programmare l'algoritmo SEGUIRE SEMPRE LA PARETE DI DESTRA quindi premere la convalida",
+            "victory" : 
+            [
+                "Bravo! Il robot verde può uscire da qualsiasi labirinto.",
+                "Esistono altri algoritmi che consentono di risolvere i labirinti, tutti diversi.",
+                "Passate a \"livello esperto\" per scoprirli.",
+                "Per un livello più facile, scegliete \"livello principiante\"."
+            ]
+        }
+
+    }
+    
+}
