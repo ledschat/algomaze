@@ -64,32 +64,32 @@ set (
     src/game.cxx
     src/mazeList.cxx
 
-    matlab/all.cpp
-    matlab/generateMaze_emxutil.cpp
-    matlab/rand.cpp
-    matlab/updateMazePledge.cpp
-    matlab/any1.cpp
-    matlab/generateMaze_initialize.cpp
-    matlab/repmat.cpp
-    matlab/updateMazeRandomMouse.cpp
-    matlab/circshift.cpp
-    matlab/generateMaze_rtwutil.cpp
-    matlab/rng.cpp
-    matlab/updateMazeShortestPathBFS.cpp
-    matlab/eml_rand_mt19937ar_stateful.cpp
-    matlab/generateMaze_terminate.cpp
-    matlab/rtGetInf.cpp
-    matlab/updateMazeTremauxs.cpp
-    matlab/generateMaze.cpp
-    matlab/ifWhileCond.cpp
-    matlab/rtGetNaN.cpp
-    matlab/updateMazeWallFollower.cpp
-    matlab/generateMaze_data.cpp
-    matlab/rt_nonfinite.cpp
-    matlab/updateStartPosition.cpp
-    matlab/generateMaze_emxAPI.cpp
-    matlab/mod.cpp
-    matlab/sum.cpp
+    lib/matlab/all.cpp
+    lib/matlab/generateMaze_emxutil.cpp
+    lib/matlab/rand.cpp
+    lib/matlab/updateMazePledge.cpp
+    lib/matlab/any1.cpp
+    lib/matlab/generateMaze_initialize.cpp
+    lib/matlab/repmat.cpp
+    lib/matlab/updateMazeRandomMouse.cpp
+    lib/matlab/circshift.cpp
+    lib/matlab/generateMaze_rtwutil.cpp
+    lib/matlab/rng.cpp
+    lib/matlab/updateMazeShortestPathBFS.cpp
+    lib/matlab/eml_rand_mt19937ar_stateful.cpp
+    lib/matlab/generateMaze_terminate.cpp
+    lib/matlab/rtGetInf.cpp
+    lib/matlab/updateMazeTremauxs.cpp
+    lib/matlab/generateMaze.cpp
+    lib/matlab/ifWhileCond.cpp
+    lib/matlab/rtGetNaN.cpp
+    lib/matlab/updateMazeWallFollower.cpp
+    lib/matlab/generateMaze_data.cpp
+    lib/matlab/rt_nonfinite.cpp
+    lib/matlab/updateStartPosition.cpp
+    lib/matlab/generateMaze_emxAPI.cpp
+    lib/matlab/mod.cpp
+    lib/matlab/sum.cpp
 )
 
 set (
