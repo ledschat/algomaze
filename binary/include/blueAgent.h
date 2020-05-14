@@ -12,8 +12,6 @@
 #include <chrono>
 #include <fstream>
 
-#include <SFML/Audio.hpp>
-
 namespace LedsChat
 {
 
@@ -70,9 +68,6 @@ namespace LedsChat
 
 			unsigned m_currentAlgorithm;
 			bool     m_previousState;
-
-			sf::SoundBuffer m_soundBuffer;
-			sf::Sound       m_sound;  
 
 			Timepoint       m_lastUpdate;
 			Micros          m_micros;    

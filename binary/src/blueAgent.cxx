@@ -1,14 +1,13 @@
 
 #include "blueAgent.h"
 #include "matlab/updateStartPosition.h"
-#include "mazeSound.h"
 
 #ifdef __unix__
 #include <termios.h>
 #endif
 
 #include <ctime>
-
+#include <iomanip>
 
 
 #define NS LedsChat::BlueAgent
@@ -24,11 +23,7 @@ NS::BlueAgent(Maze & maze, const StartData & data)
 	m_algos.push_back(std::make_unique<TremauxAlgorithm>());
 	m_algos.push_back(std::make_unique<ShortestPathAlgorithm>());
 
-
 	m_algos[m_currentAlgorithm]->init();
-
-	m_soundBuffer.loadFromMemory(mazeSound, sizeof(mazeSound));
-	m_sound.setBuffer(m_soundBuffer);
 
 	setMaze(maze, data);
 
@@ -276,8 +271,6 @@ bool NS::update()
 				c = 0;
 
 			m_running = false;
-
-			m_sound.play();
 			return false;
 		}
 

@@ -20,10 +20,6 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "10.7" CACHE STRING "Minimum OS X deployment ver
 project(Client)
 
 if(WIN32)
-    set(sfml "C:\\" CACHE STRING "SFML install path")
-    include_directories( ${sfml}/include )
-    link_directories( ${sfml}/lib )
-
     set(EXT ".exe")
 elseif(APPLE)
     set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -stdlib=libc++ -Wall -Wextra -pedantic -std=c++14")
@@ -38,18 +34,14 @@ else()
     set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=c++14")
 endif()
 
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 find_package (Threads REQUIRED)
-find_package (SFML COMPONENTS audio REQUIRED)
 
 set(generatedFolder "${CMAKE_BINARY_DIR}/generated/")
 
 set(generatedJson "${generatedFolder}/mazeJson.h")
 set(jsonFile "${CMAKE_SOURCE_DIR}/data/mazes.json")
 
-set(generatedSound "${generatedFolder}/mazeSound.h")
-set(soundFile "${CMAKE_SOURCE_DIR}/data/victory.wav")
 
 
 include_directories (
@@ -113,7 +105,6 @@ set (
     include/utils.h
 
     ${generatedJson}
-    ${generatedSound}
 )
                  
 add_executable (
@@ -124,7 +115,6 @@ add_executable (
 
 target_link_libraries(
     client
-    ${SFML_AUDIO_LIBRARY}
     ${CMAKE_THREAD_LIBS_INIT}
 )
 
@@ -134,12 +124,6 @@ add_custom_command (
     COMMAND ${CMAKE_COMMAND} -DINPUTFILE=${jsonFile} -DOUTPUTFILE=${generatedJson} -DNAME=mazeJson -P ${CMAKE_SOURCE_DIR}/cmake/fileToHeader.cmake
     DEPENDS ${jsonFile}
 )   
-
-add_custom_command (
-    OUTPUT ${generatedSound}
-    COMMAND ${CMAKE_COMMAND} -DINPUTFILE=${soundFile} -DOUTPUTFILE=${generatedSound} -DNAME=mazeSound -P ${CMAKE_SOURCE_DIR}/cmake/fileToHeader.cmake
-    DEPENDS ${soundFile}
-)  
 
 add_custom_command (
     TARGET 
