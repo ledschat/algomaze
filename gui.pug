@@ -6,20 +6,18 @@ html
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        link(href="bootstrap/css/bootstrap.min.css", rel="stylesheet")
-        link(rel="stylesheet", href="font-awesome/css/font-awesome.min.css")
-        link(rel="stylesheet" type="text/css" href="frontend/css/style.css")
+        link(rel="stylesheet" href="/frontend/css/bootstrap.min.css", )
+        link(rel="stylesheet" href="/frontend/css/fontawesome.min.css")
+        link(rel="stylesheet" href="/frontend/css/style.css")
     body
         script 
             | if (typeof module === 'object') {window.module = module; module = undefined;}
 
-        script(src="socketio/socket.io.js")
-        script(src="js/web.js")
-        script(src="jquery/jquery.min.js")
-        script(src="jquery-ui/jquery-ui.min.js")
-        script(src="frontend/js/jquery.ui.touch-punch.min.js")
-        script(src="bootstrap/js/bootstrap.min.js")
-        script(src="js/frontEnd.js")
+        script(src="/frontend/js/jquery.min.js")
+        script(src="/frontend/js/jquery-ui.min.js")
+        script(src="/frontend/js/jquery.ui.touch-punch.min.js")
+        script(src="/frontend/js/bootstrap.min.js")
+        script(src="/js/frontend.js")
             | if (window.module) module = window.module;
         
         include gui.html

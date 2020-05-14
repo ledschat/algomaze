@@ -20,6 +20,7 @@ function SecondApp()
     var aliveTimeout = undefined;
     
     var nbLines      = 0;
+    var webrtc       = new Communication();
     
     var self        = this;
     
@@ -782,7 +783,7 @@ function SecondApp()
 
         screen.next(config.secondApp.defaultScreen);
         
-        webrtc.onData(onData);
+        webrtc.on('data', onData);
         
         timeout.setRedirect(function () { screen.next(config.secondApp.defaultScreen); } );
         

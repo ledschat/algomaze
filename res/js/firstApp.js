@@ -30,6 +30,8 @@ function FirstApp()
     var okButton     = undefined;
     
     var self        = this;
+
+    var webrtc       = new Communication();
     
     
     // Event functions
@@ -525,7 +527,7 @@ function FirstApp()
 
         screen.next(config.firstApp.defaultScreen);
         
-        webrtc.onData(onData);
+        webrtc.on('data', onData);
         
         timeout.setRedirect(function () { screen.next(config.firstApp.defaultScreen); } );
         

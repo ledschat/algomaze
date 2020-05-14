@@ -29,8 +29,6 @@ function  bindEvents ()
 
 }
 
-frontEnd.onEnd(unbindEvents);
-
 setLang(selectedLang);
 
 setTimeout(bindEvents, 10);
