@@ -1,6 +1,6 @@
 {
     "defaultLanguage" : "fr",
-    "disableMouse"    : true,
+    "disableMouse"    : false,
     "timeout"         : 60, 
     "waitingTimeout"  : 10,
     "screenSaver"     : 20,
