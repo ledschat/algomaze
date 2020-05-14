@@ -32,7 +32,8 @@ void NS::run()
 
     unsigned cptUp = 0;
 
-    std::ifstream settings("data/settings.json");
+	std::string configFile = Fs::join(AppInfos::getAppDir(), "data/settings.json");
+    std::ifstream settings(configFile);
 
    	LedsChat::Json settingsJson;
    	settings >> settingsJson;

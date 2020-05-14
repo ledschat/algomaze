@@ -1,14 +1,15 @@
 
 #include "mazeList.h"
 
-#include "mazeJson.h"
-
 #define NS LedsChat::MazeList
 
 NS::MazeList()
 {
-	std::string json(reinterpret_cast<const char *>(mazeJson), sizeof(mazeJson));
-	Json mazes = Json::parse(json);
+	std::string configFile = Fs::join(AppInfos::getAppDir(), "data/mazes.json");
+    std::ifstream settings(configFile);
+
+   	Json mazes;
+   	settings >> mazes;
 
 	for(auto & el: mazes)
 	{

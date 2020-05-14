@@ -22,14 +22,11 @@ project(Client)
 if(WIN32)
     set(EXT ".exe")
 elseif(APPLE)
+    set(EXT "")
     set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -stdlib=libc++ -Wall -Wextra -pedantic -std=c++14")
     set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++")
-    set(EXT "")
-
-    include_directories( /usr/local/include )
-    link_directories( /usr/local/lib )
+    
 else()
-
     set(EXT "")
     set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=c++14")
 endif()
@@ -37,17 +34,8 @@ endif()
 
 find_package (Threads REQUIRED)
 
-set(generatedFolder "${CMAKE_BINARY_DIR}/generated/")
-
-set(generatedJson "${generatedFolder}/mazeJson.h")
-set(jsonFile "${CMAKE_SOURCE_DIR}/data/mazes.json")
-
-
-
 include_directories (
     include
-    .
-    ${generatedFolder}
     lib
     ${SFML_INCLUDE_DIR}
 )
@@ -104,8 +92,6 @@ set (
     include/redAgent.h  
     include/squarewave.h  
     include/utils.h
-
-    ${generatedJson}
 )
                  
 add_executable (
@@ -119,12 +105,6 @@ target_link_libraries(
     ${CMAKE_THREAD_LIBS_INIT}
 )
 
-
-add_custom_command (
-    OUTPUT ${generatedJson}
-    COMMAND ${CMAKE_COMMAND} -DINPUTFILE=${jsonFile} -DOUTPUTFILE=${generatedJson} -DNAME=mazeJson -P ${CMAKE_SOURCE_DIR}/cmake/fileToHeader.cmake
-    DEPENDS ${jsonFile}
-)   
 
 add_custom_command (
     TARGET 
