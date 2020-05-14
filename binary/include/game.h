@@ -2,7 +2,7 @@
 #ifndef LEDSCHAT_GAME_H_
 #define LEDSCHAT_GAME_H_
 
-#include "ledschat-1.0.h"
+#include "ledschat.h"
 
 #include "maze.h"
 #include "redAgent.h"

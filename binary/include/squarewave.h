@@ -2,7 +2,7 @@
 #ifndef LEDSCHAT_SQUAREWAVE_H__
 #define LEDSCHAT_SQUAREWAVE_H__
 
-#include "ledschat-1.0.h"
+#include "ledschat.h"
 
 #include <vector>
 

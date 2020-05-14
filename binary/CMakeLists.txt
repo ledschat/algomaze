@@ -48,6 +48,7 @@ include_directories (
     include
     .
     ${generatedFolder}
+    lib
     ${SFML_INCLUDE_DIR}
 )
 

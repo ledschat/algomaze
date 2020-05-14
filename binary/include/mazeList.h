@@ -2,7 +2,7 @@
 #ifndef LEDSCHAT_MAZE_LIST_H_
 #define LEDSCHAT_MAZE_LIST_H_
 
-#include "ledschat-1.0.h"
+#include "ledschat.h"
 #include "utils.h"
 
 namespace LedsChat

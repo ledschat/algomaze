@@ -1,6 +1,6 @@
 
 
-#include "ledschat-1.0.h"
+#include "ledschat.h"
 #include "game.h"
 
 int main()
