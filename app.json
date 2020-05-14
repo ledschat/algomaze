@@ -1,7 +1,8 @@
 
 {
-	"name" : "Labyrinthe v1.5.4",
+	"name" : "Labyrinthe",
 	"description": "Application description",
+	"version": "1.6",
 
 	"app" : 
 	{
