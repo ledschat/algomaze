@@ -3,6 +3,8 @@
 #include "ledschat.h"
 #include "game.h"
 
+#pragma comment(lib, "Ws2_32.lib")
+
 int main()
 {
 	LedsChat::RenderWall wall;
