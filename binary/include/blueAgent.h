@@ -31,7 +31,12 @@ namespace LedsChat
 
 			void setLuminosity(float lum);
 
-			bool serial  ();
+			unsigned getMemory();
+			unsigned getTime();
+
+			bool serial ();
+
+			bool isRunning();
 
 		private:
 

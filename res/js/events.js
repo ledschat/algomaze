@@ -7,6 +7,8 @@ if(type == config.firstApp.url)
     app = new FirstApp();
 else if(type == config.secondApp.url)
     app = new SecondApp();
+else if(type == config.thirdApp.url)
+    app = new ThirdApp();
 else 
     app = new Selecter();
 
@@ -37,8 +39,8 @@ var timeoutRestart;
 
 function restart()
 {
-    app.restart();
-    $('#restartModal').modal('hide');
+    window.location.href = '/';
+    //$('#restartModal').modal('hide');
 
     return false;
 }
@@ -57,7 +59,7 @@ $('#restartKO').on('click', cancelRestart);
 
 
 $('#restartGame').on('click', function() { $('#restartModal').modal('show'); timeoutRestart = setTimeout(cancelRestart, 10000); return false } );
-$('#restartModal').on('hide.bs.modal', function () { console.log('hello'); clearTimeout(timeoutRestart); });
+$('#restartModal').on('hide.bs.modal', function () {  clearTimeout(timeoutRestart); });
 
 
 var copyrightRestart;

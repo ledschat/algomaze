@@ -25,6 +25,7 @@ void NS::run()
 
     bool puppetOrders = false;
     bool followingOrders = false;
+    bool smartOrders = false;
 
     bool screenSaver = false;
 
@@ -91,6 +92,21 @@ void NS::run()
 			{
 				followingOrders = false;
 				m_greenAgent.reset();
+			}
+
+			else if(json["cmd"] == "resetSmartAgent")
+			{
+				smartOrders = false;
+				int algo = json["algorithm"];
+				m_blueAgent.reset(algo);
+				m_wall.send({{"cmd", "smartUpdate"}, {"memory", 0}, {"time", 0}});
+			}
+
+			else if(json["cmd"] == "moveSmartAgent")
+			{
+				smartOrders = true;
+				m_blueAgent.reset();
+				m_blueAgent.start();
 			}
 		}
 
@@ -177,6 +193,19 @@ void NS::run()
 						m_wall.send({{"cmd", "followingOK"}});
 						break;
 
+				}
+			}
+
+			if(smartOrders)
+			{
+				if(m_blueAgent.isRunning())
+				{
+					m_wall.send({{"cmd", "smartUpdate"}, {"memory", m_blueAgent.getMemory()}, {"time", m_blueAgent.getTime()}});
+				}
+				else
+				{
+					smartOrders = false;
+					m_wall.send({{"cmd", "smartDone"}});
 				}
 			}
 

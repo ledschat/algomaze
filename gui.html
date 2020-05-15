@@ -1,9 +1,10 @@
 
 <div id="withoutTitle">
     <div id="selecterScreen">
-        <div class="text-center" style="margin: 30px;">
+        <div class="text-center" style="padding: 30px;">
             <a class="bigButton" id="firstAppLink" href="#">First app</a>
             <a class="bigButton" id="secondAppLink">Second app</a>
+            <a class="bigButton" id="thirdAppLink">Third app</a>
         </div>
     </div>
     
@@ -38,6 +39,16 @@
             <span class ="blinkButton" data-text="secondApp/instructions/2"></span>
         </button>
     </div>
+    
+    <div id="thirdAppButtonScreen">
+        <div class="instructionLine" style="animation-delay: 0s;">Repérez le carré bleu dans le labyrinthe.</div>
+        <div class="instructionLine" style="animation-delay: 0.25s;"><img src="frontend/img/blueRobot.png" style="width: 30px; margin: 10px;"/></div>
+        <div class="instructionLine" style="animation-delay: 0.5s;">Imaginez que c'est un petit robot, vous allez choisir la méthode la plus efficace pour trouver la sortie.</div>
+            
+        <button type="button" class="bigButton instructionLine" style="animation-delay: 0.75s;margin-top: 3%" id="contThirdAppInstruct">
+            <span class ="blinkButton" data-text="secondApp/instructions/2"></span>
+        </button>
+    </div>
 </div>
 
 <div id="withTitle">
@@ -47,6 +58,9 @@
         </div>
         <div id="secondWelcomeSentence">
             <img src="frontend/img/greenRobot.png" style="width: 7%; margin-right: 5%;"/> <span data-text="secondApp/welcome"></span>
+        </div>
+        <div id="thirdWelcomeSentence">
+            <img src="frontend/img/blueRobot.png" style="width: 7%; margin-right: 5%;"/> <span>Comparez les algorithmes!</span>
         </div>
     </div>
     <div class="gameBody">
@@ -106,7 +120,7 @@
         
         
         <div id="gameScreen">
-            <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+            <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
                 <div data-text="firstApp/instructions/3" ></div>
                 <div data-text="firstApp/instructions/4" ></div>
                 <div data-text="firstApp/instructions/5"></div>
@@ -169,13 +183,17 @@
         			</div></div>
                 </div>
 
-                 <div class="row" style="margin-top: 20px;">
-                    <div class="col-xs-7 correctDiv" style="padding-left: 0px; text-align: right" id="textCorrect" data-text="firstApp/correct">
+                 <div class="row" style="margin-top: 20px; margin-left: 5px">
+                    <div class="col-xs-7 correctDiv" style="padding: 0px; line-height: 2em" id="textCorrect" data-text="firstApp/correct">
                     </div>
                     <div class="col-xs-5" style="padding-right: 0px;">
                         
                         <!--<button id="validation" type="button" class="bigButton" style="float: right; margin-left: 3%; margin-right: 5px" data-text="startSim"></button>-->
                         <button id="firstGameHelp" type="button" class="bigButton" style="float: right; margin-right: 5px" data-text="firstApp/help"></button>
+                        <button id="firstGameValidation" type="button" class="bigButton" style="float: right; margin-right: 5px" data-text="startSim"></button>
+                        <button id="firstGameForward" type="button" class="bigButtonImage imgDirection imgDirectionForward" style="float: right; margin-right: 30px; height: 1.5em; width: 1.5em"></button>
+                        <button id="firstGameLeft" type="button" class="bigButtonImage imgDirection imgDirectionLeft" style="float: right; margin-right: 10px; height: 1.5em; width: 1.5em"></button>
+                        <button id="firstGameRight" type="button" class="bigButtonImage imgDirection imgDirectionRight" style="float: right; margin-right: 10px; height: 1.5em; width: 1.5em"></button>
                     </div>
                    
                 </div>
@@ -231,16 +249,7 @@
                         <div class="row" id="algorithm">
                             
                         </div>
-                        <div class="row">
-                            <div class="algorithmButtons">
-                                <button type="button" class="bigButtonModal" id="newLine" data-text="secondApp/addLine">
-                                </button>
-                                <button type="button" class="bigButtonModal " id="secondGameHelp" style="float:right" data-text="secondApp/solution">
-                                </button>
-                            </div>
-                        </div>
                     </div>
-                    
                     
                     
                     <div class="col-xs-3">
@@ -286,10 +295,116 @@
                         
                     </div>
                 </div>
+                    <div class="col-xs-3">
+                        </div>
+                <div class="col-xs-6">
+                        
+                        <div class="row">
+                            <div class="algorithmButtons">
+                                <button type="button" class="bigButton" id="newLine" data-text="secondApp/addLine">
+                                </button>
+                                <button type="button" class="bigButton" id="secondGameHelp" style="float:right" data-text="secondApp/solution">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
                 
                 
         
             </div>
+        </div>
+        
+         <div id="thirdGameScreen">
+             Choisissez un algorithme et appuyez sur validation pour voir le robot l'exécuter.
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-1">
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="tab">
+                          <button class="tablinks bigButton tablinksSelected" id="tablinks1">Random mouse</button>
+                          <button class="tablinks bigButton" id="tablinks2">Main droite</button>
+                          <button class="tablinks bigButton" id="tablinks3">Pledge</button>
+                          <button class="tablinks bigButton" id="tablinks4">Parcours en profondeur</button>
+                          <button class="tablinks bigButton" id="tablinks5">Parcours en largeur</button>
+                        </div>
+                        
+                        <div id="tabcontent1" class="tabcontent">
+                            <h1>Random Mouse</h1>
+                            <p>
+                                À chaque intersection, le robot prend une direction aléatoire. C'est donc un algorithme très simple ne nécessitant pas de mémoire, 
+                                mais il n'est pas garanti que le robot arrive à sortir du labyrinthe.
+                            </p>
+                        </div>
+                        
+                        <div id="tabcontent2" class="tabcontent" style="display: none">
+                            <h1>Main droite</h1>
+                            <p>
+                                À chaque intersection, le robot prend le chemin le plus à droite possible. S'il ne peut pas aller à droite, il va tout droit. S'il ne peut pas aller tout 
+                                droit il va à gauche, et il fait demi-tour sinon. Cela revient à poser la main sur le mur de droite
+                                et ne pas le lacher. 
+                           </p>
+                            <p>   
+                                Si le labyrinthe ne comporte pas d'îlot (un chemin autour duquel le robot peut tourner en boucle) alors le rebot sera certain de trouver la sortie, 
+                                car il va explorer le labyrinthe en entier.
+                            </p>
+                            <p>
+                                Tout comme Random Mouse, il n'y a pas besoin de mémoire.
+                            </p> 
+                        </div>
+                        
+                        <div id="tabcontent3" class="tabcontent" style="display: none">
+                            <h1>Pledge</h1>
+                            <p>
+                                L'algorithme de Pledge est une amélioration de L'algorithme de la main droite, pour sortir des îlots. Le robot suit le mur de droite 
+                                et compte en plus la somme des virages qu'il prend (90° dans le sens hoaire, -90° dans le sens anti-horaire). 
+                            </p>
+                            <p>  
+                                Quand le robot
+                                revient à la même orientation qu'il avait au tout début, et que la somme des virages et de nouveau 0, il arrête de suivre le 
+                                mur de droite et continue tout droit. 
+                            </p>
+                            <p>  
+                                Cette méthode est efficace pour sortir des îlots, mais nécessite un peu de mémoire dont la 
+                                taille ne varie pas lors de l'exploration du labyrinthe.
+
+                            </p>
+                        </div>
+                        <div id="tabcontent4" class="tabcontent" style="display: none">
+                            <h1>Parcours en profondeur</h1>
+                            <p>
+                                À chaque intersection, le robot laisse une marque signalant d'où il vient, et la direction qu'il a emprunté. Quand il tombe dans un cul-de-sac, il remonte à 
+                                la dernière intersection marquée ayant des sorties non-marquées (ce qui signifie qu'il peut remonter plusieurs intersections d'un coup). Il en choisit une puis continue son chemin.
+                            </p>
+                            <p>
+                                
+                                La mémoire demandée dépend de la taille du labyrinthe, contrairement à Pledge où la mémoire est constante. Le robot devrait cependant sortir plus rapidement du labyrinthe.
+                            </p>
+                        </div>
+                        <div id="tabcontent5" class="tabcontent" style="display: none">
+                            <h1>Parcours en largeur</h1>
+                            <p>
+                                À chaque intersection, le robot explore toutes les directions possibles en parralèle. 
+                            </p>
+                            <p>
+                                Cela nécessite donc plus de mémoire que le parcours en profondeur, mais garantit que le chemin trouvé sera le plus court 
+                                (comme tous les chemins sont explorés en parallèle le premier trouvé sera le plus court).
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="usageTitle" style="margin-top: 50px;">Mémoire utilisée</div>
+                        <div id="memoryUsed">0</div>
+                        <div class="usageTitle">Temps utilisé</div>
+                        <div id="timeUsed">0</div>
+                        <button id="thirdGameValidation" type="button" class="bigButton" style="margin-top: 50px; width: 180px;" data-text="startSim"></button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         
         <div id="victoryFirstAppScreen">
@@ -621,7 +736,7 @@
 
 <div id="footer">
     <div style="float: right"><a id="goToCopyright" href="">©</a></div>    
-    <div style="display: none" id="restartDiv"><a href="" data-text="start" id="restartGame"></a></div>
+    <div id="restartDiv"><a href="" data-text="start" id="restartGame"></a></div>
 </div>
 
 
@@ -668,6 +783,7 @@
 <script src="frontend/js/base.js"></script>
 <script src="frontend/js/firstApp.js"></script>
 <script src="frontend/js/secondApp.js"></script>
+<script src="frontend/js/thirdApp.js"></script>
 <script src="frontend/js/selecter.js"></script>
 <script src="frontend/js/events.js"></script>
 

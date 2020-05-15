@@ -14,5 +14,10 @@
         "defaultScreen" : "appealingScreen",
         "url"           : "secondApp",
         "binThreshold"  : 100 
+    },
+    "thirdApp" : 
+    {
+        "defaultScreen" : "appealingScreen",
+        "url"           : "thirdApp"
     }
 }

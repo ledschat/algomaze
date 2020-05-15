@@ -219,7 +219,7 @@ function FirstApp()
         $('#startStart').on('click',  screen.bindStartButton('buttonScreen', 'en'));
         $('#startInizio').on('click', screen.bindStartButton('buttonScreen', 'it'));
         
-        $('#restartDiv').fadeOut(200);
+      //  $('#restartDiv').fadeOut(200);
         
         $('#withTitle').fadeOut(200);
         $('#withoutTitle').show(200);
@@ -235,7 +235,7 @@ function FirstApp()
         $('#startStart').unbind('click');
         $('#startInizio').unbind('click');
         
-        $('#restartDiv').fadeIn(200);
+       // $('#restartDiv').fadeIn(200);
         
     }
     
@@ -331,7 +331,13 @@ function FirstApp()
         $(document).on('keydown', keyReceiver); 
         
         $('#firstGameHelp').on('click', help);
-        $('#firstGameHelp').hide();       
+        $('#firstGameHelp').hide();    
+        
+        $('#firstGameValidation').on('click', keyReceiver.bind(undefined, {key: "Enter"}));
+		$('#firstGameForward').on('click', keyReceiver.bind(undefined, {key: "ArrowUp"}));
+		$('#firstGameLeft').on('click', keyReceiver.bind(undefined, {key: "ArrowLeft"}));
+		$('#firstGameRight').on('click', keyReceiver.bind(undefined, {key: "ArrowRight"}));
+		   
        
         
         timeout.start();
@@ -375,6 +381,11 @@ function FirstApp()
         
         clearTimeout(aliveTimeout);
         
+        $('#firstGameValidation').unbind('click');
+		$('#firstGameForward').unbind('click');
+		$('#firstGameLeft').unbind('click');
+		$('#firstGameRight').unbind('click');
+        
         if(conn.connected)
         {
            okButton.close();
@@ -394,7 +405,8 @@ function FirstApp()
     {
         sendAlive();
         
-        $('#endFirstGame').on('click', screen.bindNext('appealingScreen'));
+        $('#endFirstGame').on('click', () => { window.location.href = '/'; });
+       // $('#endFirstGame').on('click', screen.bindNext('appealingScreen'));
 
         timeout.start();
     }
@@ -498,6 +510,7 @@ function FirstApp()
 		    clearTimeout(phiTimeout);
 			
 		}).catch(function (err) {
+		    console.log('error');
 		});
     }
 

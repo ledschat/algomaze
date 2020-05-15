@@ -12,6 +12,12 @@
     src: url(../fonts/SHPinscher.otf);
 }
 
+@font-face
+{
+    font-family: DigitalDream;
+    src: url(../fonts/DIGITALDREAMNARROW.ttf);
+}
+
 html, body
 {
    height: 100%;
@@ -138,7 +144,7 @@ body
     content: '';
 }
 
-#firstWelcomeSentence, #secondWelcomeSentence
+#firstWelcomeSentence, #secondWelcomeSentence, #thirdWelcomeSentence
 {
     position: absolute;
     color: white;
@@ -180,6 +186,34 @@ body
     padding-left: 20%;
     padding-right: 20%;
 }
+
+#thirdAppButtonScreen
+{
+    display: none;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.bigButtonImage
+{
+    background : white;
+    color: #0072be;
+    border: 0px;
+    font-size: 4rem;
+    margin-left: 1%;
+    box-shadow: -5px 5px #6cadda;
+    font-family: SHPinscher;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    border-radius: 3px;
+    
+}
+
 
 .bigButton
 {
@@ -346,6 +380,16 @@ body
     
 }
 
+#thirdGameScreen
+{
+    display : none;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1.5%;
+    
+}
+
+
 
 #selecterScreen
 {
@@ -370,7 +414,6 @@ body
 
 #firstGameHelp
 {
-    display: none;
 }
 
 #videoInstructions
@@ -612,8 +655,8 @@ body
     border-radius: 3px;
     padding: 10px;
     color: #666666;
-    min-height: 680px;
-    max-height: 680px;
+    min-height: 420px;
+    max-height: 420px;
     overflow-y: auto;
     overflow-x: hidden;
     background: url('../img/mazeBg.png');
@@ -714,14 +757,14 @@ body
 .algorithmButtons
 {
     margin: 10px;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .trophy
 {
     font-size: 40rem;
     color: #6cadda;
-    line-height: 40rem;
+    line-height: 36rem;
 }
 
 #cursor
@@ -733,3 +776,93 @@ body
     display: none;
     position: fixed;
 }
+
+
+.tab 
+{
+    float: left;
+    width: 30%;
+    margin-top: 4%;
+    
+}
+
+.tablinks
+{
+    
+}
+
+.tab button 
+{
+    display: block;
+    background-color: inherit;
+    padding: 12px 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    background: white;
+    margin-bottom: 10px;
+    
+}
+
+.tab .tablinksSelected
+{
+    box-shadow: none;
+    transform: translateX(-5px) translateY(5px);
+    background: #ddd;
+}
+
+.tab button:hover
+{
+    background-color: #ddd;
+}
+
+.tab button.active
+{
+    background-color: #ccc;
+}
+
+.tabcontent 
+{
+    float: left;
+    padding: 10px 20px;
+    width: 60%;
+    margin-top: 4%;
+    background-image: url('../img/mazeBg.png');
+    border: 1px white solid;
+    border-radius : 3px;
+    margin-left: 20px;
+    color: #666666;
+    text-align: justify;
+}
+
+
+.tabcontent h1
+{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    width: 100%;
+    font-family: SHPinscher;
+    margin-top: 0px;
+}
+
+.usageTitle
+{
+    width: 200px;
+}
+
+#memoryUsed, #timeUsed
+{
+    font-family:DigitalDream;
+    background: black;
+    padding: 5px 30px 5px 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: right;
+    width: 180px;
+}
+

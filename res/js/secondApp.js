@@ -395,7 +395,7 @@ function SecondApp()
         animation.start();
         
         
-        $('#restartDiv').fadeOut(200);
+      //  $('#restartDiv').fadeOut(200);
         
         $('#startDebut').on('click',  screen.bindStartButton('secondAppButtonScreen', 'fr'));
         $('#startStart').on('click',  screen.bindStartButton('secondAppButtonScreen', 'en'));
@@ -407,7 +407,7 @@ function SecondApp()
     
     function stopAppealing()
     {
-        $('#restartDiv').fadeIn(200);
+       // $('#restartDiv').fadeIn(200);
         animation.stop();
         
         $('#startDebut').unbind('click');
@@ -589,7 +589,8 @@ function SecondApp()
         
         timeout.start();
 
-        $('#endSecondGame').on('click', screen.bindNext('appealingScreen'));
+        $('#endSecondGame').on('click', () => { window.location.href = '/'; });
+      //  $('#endSecondGame').on('click', screen.bindNext('appealingScreen'));
     }
 
     

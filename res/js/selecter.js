@@ -13,6 +13,7 @@ function Selecter()
     {
         $('#firstAppLink').attr("href", "?type=" + config.firstApp.url);
         $('#secondAppLink').attr("href", "?type=" + config.secondApp.url);
+        $('#thirdAppLink').attr("href", "?type=" + config.thirdApp.url);
     }
 
 

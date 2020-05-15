@@ -346,6 +346,21 @@ void NS::draw(RenderWall & wall)
 	}
 }
 
+unsigned NS::getMemory()
+{
+	return m_usedMemory;
+}
+
+unsigned NS::getTime()
+{
+	return m_time;
+}
+
+bool NS::isRunning()
+{
+	return m_running;
+}
+
 void NS::start()
 {
 	m_running = true;
