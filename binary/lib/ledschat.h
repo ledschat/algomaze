@@ -24806,7 +24806,7 @@ namespace LedsChat
         {
             char * pValue;
             size_t len;
-            if(_dupenv_s( &pValue, &len, "pathext" ) == -1) return "";
+            if(_dupenv_s( &pValue, &len, name.c_str() ) == -1) return "";
 
             std::string res(pValue, len);
             free(pValue);
