@@ -31,7 +31,7 @@ static double queueHead;
 unsigned getMazeTremauxsSize()
 {
 
-  return queueHead;
+  return (unsigned) queueHead;
 }
 
 // Function Declarations

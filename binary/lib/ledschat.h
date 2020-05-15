@@ -24798,6 +24798,24 @@ namespace LedsChat
 #define _WINSOCKAPI_
 #include <windows.h>
 
+namespace LedsChat
+{
+    namespace Private
+    {
+        inline std::string getEnv(const std::string & name)
+        {
+            char * pValue;
+            size_t len;
+            if(_dupenv_s( &pValue, &len, "pathext" ) == -1) return "";
+
+            std::string res(pValue, len);
+            free(pValue);
+
+            return res;
+        }
+    }
+}
+
 ////////////////////////////////////////////////////////////
 inline std::string NS::getExecutablePath()
 {
@@ -24810,10 +24828,10 @@ inline std::string NS::getExecutablePath()
 ////////////////////////////////////////////////////////////
 inline std::string NS::getHomePath()
 {
-    char * res = getenv("USERPROFILE");
-    if(res != nullptr) return res;
+    std::string res = Private::getEnv("USERPROFILE");
+    if(res != "") return res;
 
-    return join(getenv("HOMEDRIVE"), getenv("HOMEPATH"));
+    return join(Private::getEnv("HOMEDRIVE"), Private::getEnv("HOMEPATH"));
 }
 
 ////////////////////////////////////////////////////////////

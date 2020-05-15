@@ -35,8 +35,6 @@ namespace LedsChat
 
 		private:
 
-			std::string currentDateTime();
-
 			using Algos   = std::vector<std::unique_ptr<MazeAlgorithm>>;
 
 			using Timepoint = std::chrono::time_point<std::chrono::system_clock>;

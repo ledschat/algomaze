@@ -177,7 +177,7 @@ namespace LedsChat
 			if(m_oldSize == newSize)
 			{
 				//std::cout << "update worker " << m_oldCell->position << " -> " << queue[newSize - 1] << std::endl;
-				m_oldCell->position = queue[newSize - 1];
+				m_oldCell->position = (unsigned) queue[newSize - 1];
 				m_oldCell->size++;
 			}
 
@@ -185,7 +185,7 @@ namespace LedsChat
 			{
 				if(m_oldSize == 0)
 				{
-					m_workers.push_back(Worker(queue[0], m_oldCell));
+					m_workers.push_back(Worker((unsigned) queue[0], m_oldCell));
 					std::cout << "new worker " << queue[0] << std::endl;
 				}
 				else
@@ -193,7 +193,7 @@ namespace LedsChat
 					for(unsigned i(m_oldSize - 1); i < newSize; ++i)
 					{
 						//std::cout << "new worker " << queue[i] << std::endl;
-						m_workers.push_back(Worker(queue[i], m_oldCell));
+						m_workers.push_back(Worker((unsigned) queue[i], m_oldCell));
 
 						m_oldCell->children.push_back(&m_workers.back());
 					}
@@ -207,7 +207,7 @@ namespace LedsChat
 
 			m_oldSize = newSize;
 
-			unsigned oldId = queue[0];
+			unsigned oldId = (unsigned) queue[0];
 			for(auto it = m_workers.begin(); it != m_workers.end(); ++it)
 			{
 				if(it->position == oldId)

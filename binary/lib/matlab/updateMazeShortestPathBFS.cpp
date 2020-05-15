@@ -32,7 +32,7 @@ static boolean_T valueObj_not_empty;
 
 unsigned getMazeShortestPathBFSSize()
 {
-  return queueTail - b_queueHead;
+  return (unsigned) (queueTail - b_queueHead);
 }
 
 double * getMazeShortestPathBFSQueue()
@@ -42,7 +42,7 @@ double * getMazeShortestPathBFSQueue()
 
 unsigned getMazeShortestPathBFSQueueSize()
 {
-  return queueTail - b_queueHead;
+  return unsigned (queueTail - b_queueHead);
 }
 
 // Function Definitions
