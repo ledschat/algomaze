@@ -3,7 +3,9 @@
 #include "ledschat.h"
 #include "game.h"
 
+#ifdef _WIN32
 #pragma comment(lib, "Ws2_32.lib")
+#endif
 
 int main()
 {
