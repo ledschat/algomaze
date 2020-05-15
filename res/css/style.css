@@ -184,7 +184,9 @@ body
     text-align: center;
     font-size: 3rem;
     padding-top: 20%;
+    margin-bottom: 30px;
 }
+
 #secondAppButtonScreen
 {
     display: none;
@@ -193,6 +195,7 @@ body
     padding-top: 20%;
     padding-left: 20%;
     padding-right: 20%;
+    margin-bottom: 30px;
 }
 
 #thirdAppButtonScreen
@@ -203,6 +206,7 @@ body
     padding-top: 20%;
     padding-left: 20%;
     padding-right: 20%;
+    margin-bottom: 30px;
 }
 
 .bigButtonImage
@@ -371,6 +375,7 @@ body
 #appealingScreen
 {
     display : none;
+    margin-bottom: 30px;
 }
 
 #gameScreen
