@@ -12,10 +12,15 @@ cd algomaze/binary
 mkdir build
 cd build
 cmake ..
+cmake --build .
 ```
 
-To test the application you need the **Led's Chat Link** program. You can download it from [**here**](https://store.leds-chat.com).
+To test the application you need to download [**Visual Studio Code**](https://code.visualstudio.com/) and the **Mozaïk extension**, which can be get here:
 
-## Used Libraries
+- [Ubuntu >= 18.04](https://store.leds-chat.com/vsplugin/file/linux/)
+- [Windows 10 64bits](https://store.leds-chat.com/vsplugin/file/win64/)
+- [OSX >= 9](https://store.leds-chat.com/vsplugin/file/osx/)
 
-* [SFML](http://www.sfml-dev.org/) : Sound
+To Install the extension, go to the Extensions tab of Visual Studio Code, then click on the **Install from VSIX...** button of the **...** menu.
+Open the algomaze folder with Visual Studio Code, and check that the file **app.json** is located at the root of the folder. Start the application by calling the comand **Led's Chat: Start**. When asked, start the simulator.
+Finally, you can use the **Led's Chat: Open the frontend** command to open the user interface.  
